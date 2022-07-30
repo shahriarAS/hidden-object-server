@@ -3,7 +3,7 @@ require('dotenv').config()
 const { instrument } = require("@socket.io/admin-ui");
 const io = new Server(process.env.PORT, {
   cors: {
-    origin: [process.env.CLIENT_URL, "https://admin.socket.io"],
+    origin: [process.env.CLIENT_URL, process.env.CLIENT_URL2, "https://admin.socket.io"],
     credentials: true
   }
 });
